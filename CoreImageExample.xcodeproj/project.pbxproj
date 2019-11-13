@@ -15,9 +15,15 @@
 		FD5130FE236AE5F600337567 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD5130FC236AE5F600337567 /* LaunchScreen.storyboard */; };
 		FD513109236AE5F600337567 /* CoreImageExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD513108236AE5F600337567 /* CoreImageExampleTests.swift */; };
 		FD513114236AE5F600337567 /* CoreImageExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD513113236AE5F600337567 /* CoreImageExampleUITests.swift */; };
-		FD513123236AEA3200337567 /* BlurViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD513121236AEA3200337567 /* BlurViewController.swift */; };
-		FD513124236AEA3200337567 /* BlurViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD513122236AEA3200337567 /* BlurViewController.xib */; };
+		FD513123236AEA3200337567 /* GaussianBlurViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD513121236AEA3200337567 /* GaussianBlurViewController.swift */; };
+		FD513124236AEA3200337567 /* GaussianBlurViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD513122236AEA3200337567 /* GaussianBlurViewController.xib */; };
 		FD551DFE23794211008E28F3 /* CoreImageKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD551DFD23794211008E28F3 /* CoreImageKey.swift */; };
+		FD551E00237A848D008E28F3 /* ImageEffects.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD551DFF237A848D008E28F3 /* ImageEffects.swift */; };
+		FD583E39237BFBE600A80B77 /* AppleBlurExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD583E37237BFBE600A80B77 /* AppleBlurExtension.swift */; };
+		FD583E3A237BFBE600A80B77 /* AppleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD583E38237BFBE600A80B77 /* AppleViewController.swift */; };
+		FD583E3D237BFE8F00A80B77 /* BlurTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD583E3B237BFE8F00A80B77 /* BlurTableViewController.swift */; };
+		FD583E3E237BFE8F00A80B77 /* BlurTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD583E3C237BFE8F00A80B77 /* BlurTableViewController.xib */; };
+		FD583E40237C030400A80B77 /* AppleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD583E3F237C030400A80B77 /* AppleViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,9 +58,15 @@
 		FD51310F236AE5F600337567 /* CoreImageExampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoreImageExampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD513113236AE5F600337567 /* CoreImageExampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreImageExampleUITests.swift; sourceTree = "<group>"; };
 		FD513115236AE5F600337567 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FD513121236AEA3200337567 /* BlurViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurViewController.swift; sourceTree = "<group>"; };
-		FD513122236AEA3200337567 /* BlurViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BlurViewController.xib; sourceTree = "<group>"; };
+		FD513121236AEA3200337567 /* GaussianBlurViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GaussianBlurViewController.swift; sourceTree = "<group>"; };
+		FD513122236AEA3200337567 /* GaussianBlurViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GaussianBlurViewController.xib; sourceTree = "<group>"; };
 		FD551DFD23794211008E28F3 /* CoreImageKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreImageKey.swift; sourceTree = "<group>"; };
+		FD551DFF237A848D008E28F3 /* ImageEffects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageEffects.swift; sourceTree = "<group>"; };
+		FD583E37237BFBE600A80B77 /* AppleBlurExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppleBlurExtension.swift; sourceTree = "<group>"; };
+		FD583E38237BFBE600A80B77 /* AppleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppleViewController.swift; sourceTree = "<group>"; };
+		FD583E3B237BFE8F00A80B77 /* BlurTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurTableViewController.swift; sourceTree = "<group>"; };
+		FD583E3C237BFE8F00A80B77 /* BlurTableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BlurTableViewController.xib; sourceTree = "<group>"; };
+		FD583E3F237C030400A80B77 /* AppleViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AppleViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +117,7 @@
 		FD5130F0236AE5EF00337567 /* CoreImageExample */ = {
 			isa = PBXGroup;
 			children = (
+				FD583E32237BFA4700A80B77 /* BlurViewController */,
 				FD5130F1236AE5EF00337567 /* AppDelegate.swift */,
 				FD5130F3236AE5EF00337567 /* SceneDelegate.swift */,
 				FD5130F5236AE5EF00337567 /* ViewController.swift */,
@@ -112,9 +125,8 @@
 				FD5130FA236AE5F600337567 /* Assets.xcassets */,
 				FD5130FC236AE5F600337567 /* LaunchScreen.storyboard */,
 				FD5130FF236AE5F600337567 /* Info.plist */,
-				FD513121236AEA3200337567 /* BlurViewController.swift */,
-				FD513122236AEA3200337567 /* BlurViewController.xib */,
 				FD551DFD23794211008E28F3 /* CoreImageKey.swift */,
+				FD551DFF237A848D008E28F3 /* ImageEffects.swift */,
 			);
 			path = CoreImageExample;
 			sourceTree = "<group>";
@@ -135,6 +147,20 @@
 				FD513115236AE5F600337567 /* Info.plist */,
 			);
 			path = CoreImageExampleUITests;
+			sourceTree = "<group>";
+		};
+		FD583E32237BFA4700A80B77 /* BlurViewController */ = {
+			isa = PBXGroup;
+			children = (
+				FD583E37237BFBE600A80B77 /* AppleBlurExtension.swift */,
+				FD583E38237BFBE600A80B77 /* AppleViewController.swift */,
+				FD583E3F237C030400A80B77 /* AppleViewController.xib */,
+				FD513121236AEA3200337567 /* GaussianBlurViewController.swift */,
+				FD513122236AEA3200337567 /* GaussianBlurViewController.xib */,
+				FD583E3B237BFE8F00A80B77 /* BlurTableViewController.swift */,
+				FD583E3C237BFE8F00A80B77 /* BlurTableViewController.xib */,
+			);
+			path = BlurViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -244,7 +270,9 @@
 				FD5130FE236AE5F600337567 /* LaunchScreen.storyboard in Resources */,
 				FD5130FB236AE5F600337567 /* Assets.xcassets in Resources */,
 				FD5130F9236AE5EF00337567 /* Main.storyboard in Resources */,
-				FD513124236AEA3200337567 /* BlurViewController.xib in Resources */,
+				FD583E3E237BFE8F00A80B77 /* BlurTableViewController.xib in Resources */,
+				FD513124236AEA3200337567 /* GaussianBlurViewController.xib in Resources */,
+				FD583E40237C030400A80B77 /* AppleViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,11 +297,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD551E00237A848D008E28F3 /* ImageEffects.swift in Sources */,
+				FD583E39237BFBE600A80B77 /* AppleBlurExtension.swift in Sources */,
 				FD5130F6236AE5EF00337567 /* ViewController.swift in Sources */,
 				FD551DFE23794211008E28F3 /* CoreImageKey.swift in Sources */,
 				FD5130F2236AE5EF00337567 /* AppDelegate.swift in Sources */,
+				FD583E3A237BFBE600A80B77 /* AppleViewController.swift in Sources */,
 				FD5130F4236AE5EF00337567 /* SceneDelegate.swift in Sources */,
-				FD513123236AEA3200337567 /* BlurViewController.swift in Sources */,
+				FD513123236AEA3200337567 /* GaussianBlurViewController.swift in Sources */,
+				FD583E3D237BFE8F00A80B77 /* BlurTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

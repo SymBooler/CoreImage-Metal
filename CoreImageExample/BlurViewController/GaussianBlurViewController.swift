@@ -1,15 +1,18 @@
 //
-//  BlurViewController.swift
+//  GaussianBlurViewController.swift
 //  CoreImageExample
 //
 //  Created by 张广路 on 2019/10/31.
 //  Copyright © 2019 symbool. All rights reserved.
 //
 
+//import Accelerate
+//vImageBoxConvolve_ARGB8888 是Accelerate 提供的方法
+//[参考](https://github.com/card-io/card.io-iOS-source/blob/master/Classes/UIImage%2BImageEffects.h)
 import UIKit
 import CoreImage
 
-class BlurViewController: UIViewController {
+class GaussianBlurViewController: UIViewController {
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var slider: UISlider!
     var image = UIImage(named: .Blur)
@@ -26,15 +29,28 @@ class BlurViewController: UIViewController {
         guard let slider = sender as? UISlider else {
             return
         }
-        updateBlur(Double(slider.value))
+        updateBlur(Double(slider.value), useFilter: false)
     }
     
-    func updateBlur(_ radius: Double) {
-        
-        guard let image = outputImage(filterName: CoreImageType.CIGaussianBlur.rawValue, radius: radius * 100) else {
-            return
+    func updateBlur(_ radius: Double, useFilter: Bool = true) {
+        if useFilter {
+            DispatchQueue.global().async {
+                guard let image = self.outputImage(filterName: CoreImageType.CIGaussianBlur.rawValue, radius: radius * 100) else {
+                    return
+                }
+                DispatchQueue.main.async {
+                    self.imageView.image = image
+                }
+            }
+        } else {
+            guard let image = image?.applyBlur(blurRadius: CGFloat(radius * 100), tintColor: UIColor.clear, saturationDeltaFactor: 1) else {
+                return
+            }
+//            guard let image = image?.applyDarkEffect() else {
+//                return
+//            }
+            imageView.image = image
         }
-        imageView.image = image
     }
     
     func outputImage(filterName: String, radius: Double) -> UIImage? {

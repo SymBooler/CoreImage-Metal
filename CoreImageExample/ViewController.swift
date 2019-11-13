@@ -40,7 +40,7 @@ extension ViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        let vc = BlurViewController()
+        let vc = BlurTableViewController()
         navigationController?.pushViewController(vc, animated: true)
     }
 }
