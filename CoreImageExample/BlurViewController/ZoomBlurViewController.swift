@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Combine
 
 class ZoomBlurViewController: UIViewController {
     
@@ -19,7 +20,7 @@ class ZoomBlurViewController: UIViewController {
     var context: CIContext?
     var filter: CIFilter?
     
-    
+    var cancelable: AnyCancellable?
     
     
     @IBOutlet weak var imageView: UIImageView!
@@ -30,12 +31,12 @@ class ZoomBlurViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        NotificationCenter.default.addObserver(self, selector: #selector(textFieldDidChange), name: UITextField.textDidChangeNotification, object: nil)
-        _ = NotificationCenter.default.publisher(for: UITextField.textDidChangeNotification).map({ ($0.object as! UITextField).text
+//        NotificationCenter.default.addObserver(self, selector: #selector(textFieldDidChange), name: UITextField.textDidChangeNotification, object: nil)
+        cancelable = NotificationCenter.default.publisher(for: UITextField.textDidChangeNotification).map({ ($0.object as! UITextField).text
         }).sink(receiveCompletion: { (completion) in
             debugPrint("test")
-        }) { noti in
-            debugPrint("test")
+        }) { [unowned self] noti in
+            self.updateBlur()
         }
         
         updateBlur()
