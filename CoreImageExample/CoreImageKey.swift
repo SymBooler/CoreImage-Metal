@@ -12,10 +12,17 @@ import UIKit
 
 enum CoreImageKey: String {
     case inputRadius
+    case inputMask
+    case inputAngle
 }
 
 enum CoreImageType: String {
     case CIGaussianBlur
+    case CIDiscBlur
+    case CIBoxBlur
+    case CIMaskedVariableBlur
+    case CIMotionBlur
+    case CIMedianFilter
 }
 
 enum ImageName: String {
@@ -32,5 +39,12 @@ extension CIFilter {
 extension UIImage {
     convenience init?(named: ImageName) {
         self.init(named: named.rawValue)
+    }
+}
+
+extension CGRect {
+    
+    func muilti(ratio: CGFloat) -> CGRect {
+        return CGRect(origin: origin, size: CGSize(width: size.width * ratio, height: size.height * ratio))
     }
 }

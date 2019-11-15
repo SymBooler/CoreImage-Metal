@@ -10,6 +10,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GaussianBlurViewController">
             <connections>
                 <outlet property="imageView" destination="37e-60-4fy" id="RRq-hh-pnl"/>
+                <outlet property="segmentedControl" destination="5WZ-ef-5Id" id="WCp-3t-ETz"/>
                 <outlet property="slider" destination="8Kv-Sd-H77" id="K1U-iL-VkH"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -19,14 +20,25 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="5WZ-ef-5Id">
+                    <rect key="frame" x="20" y="44" width="374" height="32"/>
+                    <segments>
+                        <segment title="Gassian"/>
+                        <segment title="Box"/>
+                        <segment title="Disc"/>
+                    </segments>
+                    <connections>
+                        <action selector="segmentedControlValueChanged:" destination="-1" eventType="valueChanged" id="XDL-43-G5M"/>
+                    </connections>
+                </segmentedControl>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Blur" translatesAutoresizingMaskIntoConstraints="NO" id="37e-60-4fy">
-                    <rect key="frame" x="20" y="44" width="374" height="200"/>
+                    <rect key="frame" x="20" y="95" width="374" height="200"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="200" id="mh9-YV-V9P"/>
                     </constraints>
                 </imageView>
-                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="8Kv-Sd-H77">
-                    <rect key="frame" x="18" y="274" width="378" height="31"/>
+                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" continuous="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Kv-Sd-H77">
+                    <rect key="frame" x="18" y="325" width="378" height="31"/>
                     <connections>
                         <action selector="slideValueChanged:" destination="-1" eventType="valueChanged" id="6K2-jY-HXU"/>
                     </connections>
@@ -36,10 +48,13 @@
             <constraints>
                 <constraint firstItem="8Kv-Sd-H77" firstAttribute="top" secondItem="37e-60-4fy" secondAttribute="bottom" constant="30" id="7MA-82-U4d"/>
                 <constraint firstItem="8Kv-Sd-H77" firstAttribute="leading" secondItem="37e-60-4fy" secondAttribute="leading" id="C2N-tk-eL5"/>
+                <constraint firstItem="5WZ-ef-5Id" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="HA7-eu-j2q"/>
                 <constraint firstItem="37e-60-4fy" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="Kb8-h1-xoR"/>
                 <constraint firstItem="8Kv-Sd-H77" firstAttribute="trailing" secondItem="37e-60-4fy" secondAttribute="trailing" id="Kcl-AB-xOq"/>
-                <constraint firstItem="37e-60-4fy" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="aTQ-yq-dQ9"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="5WZ-ef-5Id" secondAttribute="trailing" constant="20" id="XIS-K3-phx"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="37e-60-4fy" secondAttribute="trailing" constant="20" id="rqr-Hq-DL6"/>
+                <constraint firstItem="37e-60-4fy" firstAttribute="top" secondItem="5WZ-ef-5Id" secondAttribute="bottom" constant="20" id="so0-3k-gcx"/>
+                <constraint firstItem="5WZ-ef-5Id" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="tNg-Fx-xYn"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="139" y="115"/>

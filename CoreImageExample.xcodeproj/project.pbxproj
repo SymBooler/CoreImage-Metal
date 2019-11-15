@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FD4F2590237E972C00BD7C8A /* MotionBlurViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4F258E237E972C00BD7C8A /* MotionBlurViewController.swift */; };
+		FD4F2591237E972C00BD7C8A /* MotionBlurViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD4F258F237E972C00BD7C8A /* MotionBlurViewController.xib */; };
 		FD5130F2236AE5EF00337567 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5130F1236AE5EF00337567 /* AppDelegate.swift */; };
 		FD5130F4236AE5EF00337567 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5130F3236AE5EF00337567 /* SceneDelegate.swift */; };
 		FD5130F6236AE5EF00337567 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5130F5236AE5EF00337567 /* ViewController.swift */; };
@@ -19,6 +21,8 @@
 		FD513124236AEA3200337567 /* GaussianBlurViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD513122236AEA3200337567 /* GaussianBlurViewController.xib */; };
 		FD551DFE23794211008E28F3 /* CoreImageKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD551DFD23794211008E28F3 /* CoreImageKey.swift */; };
 		FD551E00237A848D008E28F3 /* ImageEffects.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD551DFF237A848D008E28F3 /* ImageEffects.swift */; };
+		FD5624A7237D4F5A00CEF98C /* MaskedVariableBlurViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5624A5237D4F5A00CEF98C /* MaskedVariableBlurViewController.swift */; };
+		FD5624A8237D4F5A00CEF98C /* MaskedVariableBlurViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD5624A6237D4F5A00CEF98C /* MaskedVariableBlurViewController.xib */; };
 		FD583E39237BFBE600A80B77 /* AppleBlurExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD583E37237BFBE600A80B77 /* AppleBlurExtension.swift */; };
 		FD583E3A237BFBE600A80B77 /* AppleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD583E38237BFBE600A80B77 /* AppleViewController.swift */; };
 		FD583E3D237BFE8F00A80B77 /* BlurTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD583E3B237BFE8F00A80B77 /* BlurTableViewController.swift */; };
@@ -44,6 +48,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FD4F258E237E972C00BD7C8A /* MotionBlurViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MotionBlurViewController.swift; sourceTree = "<group>"; };
+		FD4F258F237E972C00BD7C8A /* MotionBlurViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MotionBlurViewController.xib; sourceTree = "<group>"; };
 		FD5130EE236AE5EF00337567 /* CoreImageExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoreImageExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD5130F1236AE5EF00337567 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FD5130F3236AE5EF00337567 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -62,6 +68,8 @@
 		FD513122236AEA3200337567 /* GaussianBlurViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GaussianBlurViewController.xib; sourceTree = "<group>"; };
 		FD551DFD23794211008E28F3 /* CoreImageKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreImageKey.swift; sourceTree = "<group>"; };
 		FD551DFF237A848D008E28F3 /* ImageEffects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageEffects.swift; sourceTree = "<group>"; };
+		FD5624A5237D4F5A00CEF98C /* MaskedVariableBlurViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaskedVariableBlurViewController.swift; sourceTree = "<group>"; };
+		FD5624A6237D4F5A00CEF98C /* MaskedVariableBlurViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MaskedVariableBlurViewController.xib; sourceTree = "<group>"; };
 		FD583E37237BFBE600A80B77 /* AppleBlurExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppleBlurExtension.swift; sourceTree = "<group>"; };
 		FD583E38237BFBE600A80B77 /* AppleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppleViewController.swift; sourceTree = "<group>"; };
 		FD583E3B237BFE8F00A80B77 /* BlurTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurTableViewController.swift; sourceTree = "<group>"; };
@@ -152,13 +160,17 @@
 		FD583E32237BFA4700A80B77 /* BlurViewController */ = {
 			isa = PBXGroup;
 			children = (
+				FD583E3B237BFE8F00A80B77 /* BlurTableViewController.swift */,
+				FD583E3C237BFE8F00A80B77 /* BlurTableViewController.xib */,
 				FD583E37237BFBE600A80B77 /* AppleBlurExtension.swift */,
 				FD583E38237BFBE600A80B77 /* AppleViewController.swift */,
 				FD583E3F237C030400A80B77 /* AppleViewController.xib */,
 				FD513121236AEA3200337567 /* GaussianBlurViewController.swift */,
 				FD513122236AEA3200337567 /* GaussianBlurViewController.xib */,
-				FD583E3B237BFE8F00A80B77 /* BlurTableViewController.swift */,
-				FD583E3C237BFE8F00A80B77 /* BlurTableViewController.xib */,
+				FD5624A5237D4F5A00CEF98C /* MaskedVariableBlurViewController.swift */,
+				FD5624A6237D4F5A00CEF98C /* MaskedVariableBlurViewController.xib */,
+				FD4F258E237E972C00BD7C8A /* MotionBlurViewController.swift */,
+				FD4F258F237E972C00BD7C8A /* MotionBlurViewController.xib */,
 			);
 			path = BlurViewController;
 			sourceTree = "<group>";
@@ -269,10 +281,12 @@
 			files = (
 				FD5130FE236AE5F600337567 /* LaunchScreen.storyboard in Resources */,
 				FD5130FB236AE5F600337567 /* Assets.xcassets in Resources */,
+				FD5624A8237D4F5A00CEF98C /* MaskedVariableBlurViewController.xib in Resources */,
 				FD5130F9236AE5EF00337567 /* Main.storyboard in Resources */,
 				FD583E3E237BFE8F00A80B77 /* BlurTableViewController.xib in Resources */,
 				FD513124236AEA3200337567 /* GaussianBlurViewController.xib in Resources */,
 				FD583E40237C030400A80B77 /* AppleViewController.xib in Resources */,
+				FD4F2591237E972C00BD7C8A /* MotionBlurViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,7 +316,9 @@
 				FD5130F6236AE5EF00337567 /* ViewController.swift in Sources */,
 				FD551DFE23794211008E28F3 /* CoreImageKey.swift in Sources */,
 				FD5130F2236AE5EF00337567 /* AppDelegate.swift in Sources */,
+				FD4F2590237E972C00BD7C8A /* MotionBlurViewController.swift in Sources */,
 				FD583E3A237BFBE600A80B77 /* AppleViewController.swift in Sources */,
+				FD5624A7237D4F5A00CEF98C /* MaskedVariableBlurViewController.swift in Sources */,
 				FD5130F4236AE5EF00337567 /* SceneDelegate.swift in Sources */,
 				FD513123236AEA3200337567 /* GaussianBlurViewController.swift in Sources */,
 				FD583E3D237BFE8F00A80B77 /* BlurTableViewController.swift in Sources */,

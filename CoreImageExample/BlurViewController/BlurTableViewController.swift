@@ -13,10 +13,12 @@ class BlurTableViewController: UIViewController {
     enum BlurType: String, CaseIterable {
         case gaussian
         case apple
+        case maskedVariable
+        case motion
         case unsupported
     }
     
-    var list: [BlurType] = [.gaussian, .apple]
+    var list: [BlurType] = BlurType.allCases.dropLast()
 
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
@@ -48,6 +50,12 @@ extension BlurTableViewController: UITableViewDataSource, UITableViewDelegate {
             navigationController?.pushViewController(vc, animated: true)
         case .gaussian:
             let vc = GaussianBlurViewController()
+            navigationController?.pushViewController(vc, animated: true)
+        case .maskedVariable:
+            let vc = MaskedVariableBlurViewController()
+            navigationController?.pushViewController(vc, animated: true)
+        case .motion:
+            let vc = MotionBlurViewController()
             navigationController?.pushViewController(vc, animated: true)
         default:
             break
