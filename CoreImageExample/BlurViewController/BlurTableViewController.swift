@@ -15,6 +15,7 @@ class BlurTableViewController: UIViewController {
         case apple
         case maskedVariable
         case motion
+        case zoom
         case unsupported
     }
     
@@ -56,6 +57,9 @@ extension BlurTableViewController: UITableViewDataSource, UITableViewDelegate {
             navigationController?.pushViewController(vc, animated: true)
         case .motion:
             let vc = MotionBlurViewController()
+            navigationController?.pushViewController(vc, animated: true)
+        case .zoom:
+            let vc = ZoomBlurViewController()
             navigationController?.pushViewController(vc, animated: true)
         default:
             break

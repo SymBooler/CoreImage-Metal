@@ -14,6 +14,8 @@ enum CoreImageKey: String {
     case inputRadius
     case inputMask
     case inputAngle
+    case inputCenter
+    case inputAmount
 }
 
 enum CoreImageType: String {
@@ -22,6 +24,7 @@ enum CoreImageType: String {
     case CIBoxBlur
     case CIMaskedVariableBlur
     case CIMotionBlur
+    case CIZoomBlur
     case CIMedianFilter
 }
 

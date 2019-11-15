@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		FD4F2590237E972C00BD7C8A /* MotionBlurViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4F258E237E972C00BD7C8A /* MotionBlurViewController.swift */; };
 		FD4F2591237E972C00BD7C8A /* MotionBlurViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD4F258F237E972C00BD7C8A /* MotionBlurViewController.xib */; };
+		FD4F2594237EA28A00BD7C8A /* ZoomBlurViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4F2592237EA28A00BD7C8A /* ZoomBlurViewController.swift */; };
+		FD4F2595237EA28A00BD7C8A /* ZoomBlurViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD4F2593237EA28A00BD7C8A /* ZoomBlurViewController.xib */; };
 		FD5130F2236AE5EF00337567 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5130F1236AE5EF00337567 /* AppDelegate.swift */; };
 		FD5130F4236AE5EF00337567 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5130F3236AE5EF00337567 /* SceneDelegate.swift */; };
 		FD5130F6236AE5EF00337567 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5130F5236AE5EF00337567 /* ViewController.swift */; };
@@ -50,6 +52,8 @@
 /* Begin PBXFileReference section */
 		FD4F258E237E972C00BD7C8A /* MotionBlurViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MotionBlurViewController.swift; sourceTree = "<group>"; };
 		FD4F258F237E972C00BD7C8A /* MotionBlurViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MotionBlurViewController.xib; sourceTree = "<group>"; };
+		FD4F2592237EA28A00BD7C8A /* ZoomBlurViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZoomBlurViewController.swift; sourceTree = "<group>"; };
+		FD4F2593237EA28A00BD7C8A /* ZoomBlurViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZoomBlurViewController.xib; sourceTree = "<group>"; };
 		FD5130EE236AE5EF00337567 /* CoreImageExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoreImageExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD5130F1236AE5EF00337567 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FD5130F3236AE5EF00337567 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -171,6 +175,8 @@
 				FD5624A6237D4F5A00CEF98C /* MaskedVariableBlurViewController.xib */,
 				FD4F258E237E972C00BD7C8A /* MotionBlurViewController.swift */,
 				FD4F258F237E972C00BD7C8A /* MotionBlurViewController.xib */,
+				FD4F2592237EA28A00BD7C8A /* ZoomBlurViewController.swift */,
+				FD4F2593237EA28A00BD7C8A /* ZoomBlurViewController.xib */,
 			);
 			path = BlurViewController;
 			sourceTree = "<group>";
@@ -282,6 +288,7 @@
 				FD5130FE236AE5F600337567 /* LaunchScreen.storyboard in Resources */,
 				FD5130FB236AE5F600337567 /* Assets.xcassets in Resources */,
 				FD5624A8237D4F5A00CEF98C /* MaskedVariableBlurViewController.xib in Resources */,
+				FD4F2595237EA28A00BD7C8A /* ZoomBlurViewController.xib in Resources */,
 				FD5130F9236AE5EF00337567 /* Main.storyboard in Resources */,
 				FD583E3E237BFE8F00A80B77 /* BlurTableViewController.xib in Resources */,
 				FD513124236AEA3200337567 /* GaussianBlurViewController.xib in Resources */,
@@ -315,6 +322,7 @@
 				FD583E39237BFBE600A80B77 /* AppleBlurExtension.swift in Sources */,
 				FD5130F6236AE5EF00337567 /* ViewController.swift in Sources */,
 				FD551DFE23794211008E28F3 /* CoreImageKey.swift in Sources */,
+				FD4F2594237EA28A00BD7C8A /* ZoomBlurViewController.swift in Sources */,
 				FD5130F2236AE5EF00337567 /* AppDelegate.swift in Sources */,
 				FD4F2590237E972C00BD7C8A /* MotionBlurViewController.swift in Sources */,
 				FD583E3A237BFBE600A80B77 /* AppleViewController.swift in Sources */,
