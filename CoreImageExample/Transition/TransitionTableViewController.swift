@@ -1,23 +1,23 @@
 //
-//  ViewController.swift
+//  TransitionTableViewController.swift
 //  CoreImageExample
 //
-//  Created by 张广路 on 2019/10/31.
+//  Created by 张广路 on 2019/11/13.
 //  Copyright © 2019 symbool. All rights reserved.
 //
 
 import UIKit
 
-class ViewController: UITableViewController {
-
-    enum CoreImageType: String, CaseIterable {
-        case blur
-        case transition
+class TransitionTableViewController: UIViewController {
+    
+    enum TransitionType: String, CaseIterable {
+        case swipe
         case unsupported
     }
     
-    var list = CoreImageType.allCases.dropLast()
-    
+    var list = TransitionType.allCases.dropLast()
+
+    @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.backgroundColor = .lightGray
@@ -25,13 +25,13 @@ class ViewController: UITableViewController {
     }
 }
 
-extension ViewController {
+extension TransitionTableViewController: UITableViewDataSource, UITableViewDelegate {
     
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return list.count
     }
     
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "UITableViewCell")
         cell?.textLabel?.text = list[indexPath.row].rawValue
         cell?.textLabel?.textColor = .systemPurple
@@ -39,19 +39,14 @@ extension ViewController {
         return cell!
     }
     
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         switch list[indexPath.row] {
-        case .blur:
-            let vc = BlurTableViewController()
+        case .swipe:
+            let vc = SwipeTransitionController()
             navigationController?.pushViewController(vc, animated: true)
-        case .transition:
-            let vc = TransitionTableViewController()
-            navigationController?.pushViewController(vc, animated: true)
-            break
         default:
             break
         }
-        
     }
 }
